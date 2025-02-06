@@ -60,19 +60,31 @@
 			const nav = $('#ftco-nav');
 			const $this = $(this);
 			
-			if (nav.is(':visible')) {
+			if (nav.hasClass('show')) {
 				$this.removeClass('active');
+				nav.removeClass('show');
 				nav.slideUp(400);
 			} else {
 				$this.addClass('active');
+				nav.addClass('show');
 				nav.slideDown(400);
 			}
 		});
 		
-		// Close menu when clicking outside
+		// Only close menu when clicking outside on mobile
 		$(document).on('click', function(event) {
-			if (!$(event.target).closest('#ftco-nav, .js-fh5co-nav-toggle').length) {
-				$('#ftco-nav').slideUp(400);
+			if (window.innerWidth <= 768) {
+				if (!$(event.target).closest('#ftco-nav, .js-fh5co-nav-toggle').length) {
+					$('#ftco-nav').removeClass('show').slideUp(400);
+					$('.js-fh5co-nav-toggle').removeClass('active');
+				}
+			}
+		});
+
+		// Add this to handle nav links clicks on mobile
+		$('#ftco-nav .nav-link').on('click', function() {
+			if (window.innerWidth <= 768) {
+				$('#ftco-nav').removeClass('show').slideUp(400);
 				$('.js-fh5co-nav-toggle').removeClass('active');
 			}
 		});
