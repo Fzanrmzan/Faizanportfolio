@@ -3,7 +3,7 @@
   <head>
     <title>Faizan Portfolio</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
@@ -34,7 +34,7 @@
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav nav ml-auto">
-	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#home-section" class="nav-link px-3"><span>Home</span></a></li>
 	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
 	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
 	          <li class="nav-item"><a href="#services-section" class="nav-link"><span>Services</span></a></li>
@@ -53,12 +53,13 @@
 	        <div class="container">
 	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
 	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_1.png);">
+	          		<img src="images/bg_1.png" alt="Profile Image" class="img-fluid d-md-none">
 	          		<div class="overlay"></div>
 	          	</div>
 		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
 		          	<div class="text">
 		          		<span class="subheading">Hello!</span>
-			            <h1 class="mb-4 mt-3">I'm <span>Web Backend  Developer</span></h1>
+			            <h1 class="mb-4 mt-3 text-break">I'm <span class="d-inline-block">Web Backend Developer</span></h1>
 			            <h2 class="mb-4">A Freelance Web Developer</h2>
 			            <p><a href="#" class="btn btn-primary py-3 px-4">Hire me</a> <a href="emailto:fzanrmzan@gmail.com" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
 		            </div>
@@ -90,14 +91,14 @@
     <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
     	<div class="container">
     		<div class="row d-flex">
-    			<div class="col-md-6 col-lg-5 d-flex">
+    			<div class="col-12 col-md-6 col-lg-5 d-flex">
     				<div class="img-about img d-flex align-items-stretch">
     					<div class="overlay"></div>
 	    				<div class="img d-flex align-self-stretch align-items-center" style="background-image:url(profile2.jpg);">
 	    				</div>
     				</div>
     			</div>
-    			<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+    			<div class="col-12 col-md-6 col-lg-7 pl-lg-5 pb-5">
     				<div class="row justify-content-start pb-3">
 		          <div class="col-md-12 heading-section ftco-animate">
 		          	<h1 class="big">About</h1>
@@ -519,7 +520,7 @@
 
         <div class="row no-gutters block-9">
           <div class="col-md-6 order-md-last d-flex">
-            <form action="#" class="bg-light p-4 p-md-5 contact-form">
+            <form action="#" class="bg-light p-3 p-md-5 contact-form">
               <div class="form-group">
                 <input type="text" class="form-control" placeholder="Your Name">
               </div>
@@ -628,6 +629,57 @@
   <script src="js/scrollax.min.js"></script>
   
   <script src="js/main.js"></script>
+    
+  <style>
+@media (max-width: 768px) {
+    .hero {
+        min-height: 100vh;
+    }
+    
+    .slider-item {
+        height: auto;
+        padding: 100px 0;
+    }
+    
+    .one-third.img {
+        height: 300px;
+        margin-bottom: 30px;
+    }
+    
+    .progress-wrap {
+        margin-bottom: 20px;
+    }
+    
+    .ftco-navbar-light {
+        background: #000 !important;
+        padding: 10px 15px;
+    }
+    
+    .navbar-brand {
+        font-size: 18px;
+    }
+    
+    .contact-form {
+        margin-bottom: 30px;
+    }
+    
+    .project.img {
+        height: 250px;
+    }
+}
+
+/* Improve touch targets on mobile */
+@media (max-width: 768px) {
+    .nav-link {
+        padding: 15px 10px;
+    }
+    
+    .btn {
+        padding: 12px 24px;
+        font-size: 16px;
+    }
+}
+</style>
     
   </body>
 </html>
